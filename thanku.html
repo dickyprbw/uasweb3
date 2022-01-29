@@ -1,0 +1,96 @@
+<html>
+
+<head>
+
+    <title>
+        Thank You!
+    </title>
+
+    <style>
+        body {
+            font-family: Roboto Slab, Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        h1,
+        p {
+            display: flex;
+            justify-content: center;
+        }
+
+        #counter {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        #btn {
+            padding: 10px;
+            font-size: 13px;
+            background: rgb(254, 209, 54);
+            color: rgb(96, 94, 94);
+            border: none;
+            outline: none;
+            box-shadow: 13px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: .3s ease background-color;
+        }
+
+        #btn:hover {
+            background-color: #e6b301;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff8dd;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0px 0px 20px #00000010;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1>Thank you for contacting us! :)</h1>
+            <a href="index.html">
+                <button id="btn">Back to Homepage</button>
+            </a>
+
+            <p> You will be redirected in</p>
+            <div id="counter">5</div>
+            <script>
+                setInterval(function () {
+                    var div = document.querySelector("#counter");
+                    var count = div.textContent * 1 - 1;
+                    div.textContent = count;
+                    if (count <= 0) {
+                        window.location.replace("https://tropicalagroidn.com");
+                    }
+                }, 1000);
+            </script>
+            </container>
+    </section>
+    </div>
+
+</body>
+
+</html>
